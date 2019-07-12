@@ -2,7 +2,21 @@
 <html>
 <head>
     <title>注册</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/mine.css" type="text/css" />
 <style>
+.body{
+	float:right;
+	padding:10px 0 0 0;
+	width: 600px;
+	right:100px;
+	buttom:7px;
+	top:0px;
+	left:300px;
+	hight:850px;
+	position:absolute;
+}
         .pg_header{
             position: fixed;
             height: 48px;
@@ -35,7 +49,8 @@
             margin-top: 20px;
             width: 400px;
             display: inline-block;
-            float: left;        
+            float: left;
+            left:300px;
         }
         .pg_body{
             margin-top: 50px;
@@ -109,14 +124,39 @@
             margin-right: -120px;
             margin-top: -25px;
         }
+        textarea{ transition:all 0.30s ease-in-out; -webkit-transition: all 0.30s ease-in-out; -moz-transition: all 0.30s ease-in-out; border:#364f86 1px solid; border-radius:3px; outline:none; }
+        .mei{
+            transition:all 0.30s ease-in-out; -webkit-transition: all 0.30s ease-in-out; -moz-transition: all 0.30s ease-in-out; border:#364f86 1px solid; border-radius:3px; outline:none;
+        }
     </style>
 </head>
 <body id="i88" style="margin: 0">
-    <div class = "pg_header">
-        <a class = "logo">LOGO</a>
-        <a class="pg_dl" id="i77">新建会议</a>    
-    </div>
-    <form name="tijiao" method="post" onsubmit="return check()" action="winford.top">
+<div class="background">
+               <div class="top">
+                   <img src="images/logo.png">
+
+			   </div>
+
+               <div class="sidebar">
+					<ul>
+					    <li><a href="huiyiliebiao.html">会议列表</a></li>
+						<li class="selected"><a href="home.html">个人中心</a></li>
+						<li><a href="huiyiyaoqing.html">收到的会议邀请</a></li>
+						<li><a href="fabuchuangjian.html">发布创建</a></li>
+						<li><a href="fabuguanli.html">会议发布及管理</a></li>
+					</ul>
+
+					<div class="sidebar_footer">
+					    <ul>
+						    <li><a href="contact.html">联系我们</a></li>
+						    <li><a href="set.html">设置</a></li>
+					    </ul>
+					</div>
+
+			   </div>
+    <div class="body">
+			        <div class="body_left">
+        <form name="tijiao" method="post" onsubmit="return check()" action="fabuchuangjian.html">
         <div class="left"></div>
         <div class="pg_body">
                 <div class="menu">会议编号:</div>
@@ -127,12 +167,23 @@
                     <div class="kong">
                         <input id="text1" type="text" name="01" onblur="check()"><span id="div2" class="tian" style="margin-top: 4px">必填<span>
                     </div>
-				<div class="menu">会议时间:</div>
+				<div class="menu">会议日期:</div>
                     <div class="kong" style="width:200px;">
 						<div class="container" id="vue">
-							<input type="date" name="03">
+							<input class="mei" type="date" name="03">
 						</div>
-
+                    </div>
+                <div class="menu">预计开始时间:</div>
+                    <div class="kong" style="width:200px;">
+						<div class="container" id="vue">
+							<input class="mei" type="time" name="03">
+						</div>
+                    </div>
+                 <div class="menu">预计结束时间:</div>
+                    <div class="kong" style="width:200px;">
+						<div class="container" id="vue">
+							<input class="mei" type="time" name="03">
+						</div>
                     </div>
 				<div class="menu">会议地点</div>
                     <div class="kong">
@@ -149,12 +200,14 @@
         </div>
         <div class="menu">
 		<div class="left"></div>
-            <input  type="submit" name="002" value="保存">
-            <p style="width: 200px;display: inline-block;"></p>
-            <input  type="button" name="004" value="退出">
-
+            <form method="post" action="fabuchuangjian.html">
+                <input  type="submit" name="002" value="保存">
+                <input  type="button" name="004" onclick="javascript:window.location.href='fabuchuangjian.html'" value="退出">
+            </form>
         </div>
-    </form>
+        </form>
+                    </div>
+    </div>
    <script type="text/javascript">
             //刷新or取消
             document.getElementById('i77').onclick = function(){
@@ -197,9 +250,6 @@
             } 
                 
         }
-		    
-
-            
             function check(){ 
             if (checkname() && checkpassword() && checkrepassword() && checkEmail()) { 
             return true; 

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style type="text/css">
+ .turn{
+width: 1100px;
+height: 500px;
+overflow: hidden;
+position:absolute;
+top:120px;
+left:30%;
+}
+.turn img{
+cursor: pointer;
+transition: all 0.6s;
+width:600px;
+height:400px;
+}
+.turn img:hover{
+transform: scale(1.4);
+}
+
+.header{
+	background: url() no-repeat center top;
+	height:750px;
+	width:100%;
+    margin-left:auto;
+	margin-right:auto;
+	padding:0 5px;
+	position:relative;
+	background-color:#F4F9FF;
+    }
+.box1{
+	background: url() no-repeat center top;
+	height:780px;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:0 5px;
+	position:relative;
+	background-color:white;
+    }
+.box2{
+	background: url() no-repeat center top;
+	height:780px;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:0 5px;
+	position:relative;
+	background-color:#F4F9FF;
+    }
+.box3{
+	background: url() no-repeat center top;
+	height:780px;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:0 5px;
+	position:relative;
+	background-color:white;
+    }
+.logo{
+    background: url(images/tl.png) no-repeat center top;
+	position:absolute;
+	width:100%;
+	height:120px;
+	text-align:center;
+	opacity:0.6;
+	}
+.next{
+    position:absolute;
+    width:100%;
+    height:120px;
+    top:550px;
+    display:block;
+    text-align:center;
+}
+.box1 .next{
+    top:600px;
+}
+.box2 .next{
+    top:600px;
+}
+.pic{
+    position:absolute;
+    width:300px;
+    height:300x;
+    top:200px;
+    left:250px;
+    display:block;
+    text-align:center;
+}
+.pic img{
+    width:400px;
+    height:400px;
+}
+.next img{
+    align:center;
+    width:120px;
+    height:120px;
+}
+.logo img{
+    align:center;
+    width:185px;
+    height:130px;
+    opacity:1;
+    }
+.ti{
+    background: url(images/tl.png) no-repeat center top;
+	position:absolute;
+	width:100%;
+	height:120px;
+	text-align:center;
+	opacity:0.6;
+    line-height:120px;
+}
+.description{
+    position:absolute;
+    width:330px;
+    top:250px;
+    left:770px;
+    font-size:25px;
+    float:left;
+}
+.box2 .description{
+    position:absolute;
+    width:330px;
+    top:250px;
+    left:270px;
+    font-size:25px;
+    float:left;
+    }
+.box2 .pic{
+    position:absolute;
+    width:300px;
+    height:300x;
+    top:200px;
+    left:750px;
+    display:block;
+    text-align:center;
+}
+.box2 .pic img{
+    width:450px;
+    height:350px;
+}
+h3{
+	font-size:20px;
+	font-size: 2.5rem;
+	color:#68AEE1;
+	display:inline;
+	opacity:1;
+	}
+
+/*float menu*/
+.guide{
+width:80px;
+margin-left:570px;
+position:fixed;
+left:50%;
+bottom:134px;
+_position:absolute;
+_top:expression(documentElement.scrollTop+documentElement.clientHeight - this.clientHeight - 134+'px');
+display:block;
+}
+.guide a{
+display:block;
+width:80px;
+height:50px;
+margin-top:10px;
+text-decoration:none;
+font:16px/50px "Microsoft YaHei";
+text-align:center;
+color:#fff;
+border-radius:2px;
+}
+.guide a span{
+display:block;
+width:80px;
+background:#999999;
+}
+
+.guide a span{
+display:block;
+text-align:center;
+}
+.guide a:hover{
+text-decoration:none;
+background-color:#39F;
+color:#fff;
+}
+.guide a:hover span{
+display:block;
+width:80px;
+background:#39F
+}
+.guide .top{
+background:url(images/up.png) no-repeat;
+}
+.guide .top span{
+display:none;
+}
+
+/**/
+.STYLE4 {
+	font-family：微软雅黑;
+	font-size: 25px;
+}
+#Layer6 {
+	position:absolute;
+	width:100px;
+	height:40%;
+	top:30%;
+	left:77%;
+	z-index:5;
+}
+#div2 {
+display: none;
+position:absolute;
+top:300px;
+left:600px;
+height: 100px;
+width: 400px;
+padding-top: 10%;
+z-index: 1001;
+left: -600px;
+top: -10px;
+}
+table{
+border:2px solid black;
+width:400px;
+height:195px;
+background: #ffffff;
+position:static;
+filter:progid:DXImageTransform.Microsoft.DropShadow(color=#666666,offX=4,offY=4,positives=true)
+font-size:
+}
+td{
+border:none;
+width:200px;
+font-size: 20px;
+}
+.button2{
+        width: 100px;
+        padding:8px;
+        background-color: #999999;
+        border-color: black;
+        color: black;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px; /* future proofing */
+        -khtml-border-radius: 10px; /* for old Konqueror browsers */
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid transparent;
+        font-weight: 900;
+        font-size:80%
+
+}
+.input1{
+width:160px;
+height:25px;
+}
+
+    </style>
+    <script>
+function openme(){
+document.getElementById('div1').style.display='block';
+document.getElementById('div2').style.display='block';
+}
+function closeme(){
+document.getElementById('div1').style.display='none';
+document.getElementById('div2').style.display='none';
+}
+function logo_in(){
+alert();
+//myform.action=""
+//myform.submit()
+closeme();
+}
+
+	</script>
+</head>
+
+<body>
+<div class="header">
+    <div class="logo">
+        <img src="images/logo.png">
+    </div>
+    <div class="turn">
+        <img src="images/5.jpg">
+    </div>
+
+    <div class="next">
+        <a href="#link1"> <img src="images/next.png"></a>
+    </div>
+</div>
+<div class="box1">
+    <div class="ti">
+        <a name="link1"><h3>日程安排 一目了然</h3></a>
+    </div>
+    <div class="description">
+    Wisemeeting将用户报名成功的会议自动生成会议列表放在默认首页,用户登录即可查看到近期会议时间、地点等关键信息,使用户快捷方便地了解到自己的会议信息
+    </div>
+    <div class="pic">
+        <img src="images/richen.jpg">
+    </div>
+    <div class="next">
+        <a href="#link2"> <img src="images/next.png"></a>
+    </div>
+</div>
+<div class="box2">
+    <div class="ti">
+        <a name="link2"><h3>发布会议 便捷邀请</h3></a>
+    </div>
+     <div class="description">
+         用户可以编辑发布自己的会议并通过Wisemeeting快速生成会议报名的二维码链接和网页链接,用户可以复制在QQ、微信、钉钉等多平台邀请会议成员参与报名
+     </div>
+     <div class="pic">
+        <img src="images/invite.png">
+    </div>
+     <div class="next">
+        <a href="#link3"> <img src="images/next.png"></a>
+    </div>
+</div>
+<div class="box3">
+    <div class="ti">
+        <a name="link3"><h3>一键报名 自动匹配</h3></a>
+    </div>
+     <div class="description">
+         对于报名会议的用户，Wisemeeting提供自动核对用户身份的服务,点击报名链接即可核实报名者身份,报名成功生成用户专属二维码，帮助会议发布者控制会议人数和参会者身份的核对
+     </div>
+    <div class="pic">
+        <img src="images/match.jpg">
+    </div>
+</div>
+<div class="guide">
+	<div class="guide-wrap">
+		<a href="#" class="login" title="登录" onClick="openme()"><span>登录</span></a>
+		<a href="zhuce.html" class="register" title="注册"><span>注册</span></a>
+		<a href="#" class="contact" title="联系我们"><span>联系我们</span></a>
+		<a href="javascript:window.scrollTo(0,0)" class="top" title="回顶部"><span>回顶部</span></a>
+	</div>
+</div>
+<div class="STYLE4" id="Layer6">
+			<div id="div1"></div>
+			<div id="div2">
+			<table cellpadding="0" cellspacing="0" align="center">
+			<tr id="m_tr">
+			<td>
+            </td>
+			<td align="right" >
+			<input type="button" value="X" onClick="closeme()" style="cursor: hand;">
+			</td>
+			</tr>
+            <tr width=400px bgcolor="#cccccc" height="60px">
+			    <td colspan="2" align="center"  style="font-size:30px;">
+                欢 迎 登 录
+                </td>
+            </tr>
+			<tr width=400px bgcolor="#cccccc" height="60px">
+			    <td colspan="2" align="center">
+                用户名：<input class="input1" type="text" name="username" size="12">
+                </td>
+            </tr>
+            <tr width=400px bgcolor="#cccccc" height="60px">
+                <td colspan="2" align="center">
+			    密&nbsp;&nbsp;&nbsp;码：<input class="input1" type="password" name="pasword" size="12">
+                </td>
+            </tr>
+            <tr width=400px bgcolor="#cccccc" height="60px">
+			    <td colspan="2" align="center">
+                验证码：<input class="input1" type="text" name="username" size="12">
+                </td>
+            </tr>
+            <tr width=400px bgcolor="#cccccc" height="60px">
+                <td align="center">
+                     <form name="myform" method="post"  action="huiyiliebiao.html" width="200px">
+			           <input type="submit" class="button2" name="logoin" value="登录" onClick="logo_in()">&nbsp;&nbsp;&nbsp;
+                     </form>
+                </td>
+                <td align="center">
+			           <input type="button" class="button2" name="exit" value="注册" onclick="javascript:window.location.href='zhuce.html'">
+                </td>
+			</tr>
+			</table>
+			</div>
+	</div>
+</body>
+</html>

@@ -5,9 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<link rel="stylesheet" href="css/mine.css" type="text/css" />
     <title>日程安排</title>
     <style type="text/css">
-      body {max-width: 400px;margin-left: auto;margin-right: auto}
+     .body1{
+	float:left;
+	width: 600px;
+	top:150px;
+	left:300px;
+	hight:300px;
+	position:absolute;
+    }
+    .body2{
+	float:left;
+	width: 600px;
+	buttom:7px;
+	top:450px;
+	left:300px;
+	hight:300px;
+	position:absolute;
+    }
+    .body3{
+	float:left;
+	width: 600px;
+	top:700px;
+	left:300px;
+	position:absolute;
+    }
       h3 {margin-top: 40px;}
 
       ul,li {list-style: none;}
@@ -72,13 +96,13 @@
 <body>
 <div class="background">
                <div class="top">
-			        <h1 id="logo">logo</h1>
+			        <img src="images/logo.png">
 			   </div>
 
                <div class="sidebar">
 					<ul>
-					    <li><a href="huiyiliebiao.html">会议列表</a></li>
-						<li class="selected"><a href="home.html">个人中心</a></li>
+					    <li class="selected"><a href="huiyiliebiao.html">会议列表</a></li>
+						<li><a href="home.html">个人中心</a></li>
 						<li><a href="huiyiyaoqing.html">收到的会议邀请</a></li>
 						<li><a href="fabuchuangjian.html">发布创建</a></li>
 						<li><a href="fabuguanli.html">会议发布及管理</a></li>
@@ -92,19 +116,56 @@
 					</div>
 
 			   </div>
-	<div class="body">
-		<h3>日程安排</h3>
-		<div id="j_weeklyCalendar" class="myWeeklyCanlendar">
-		  <div class="datetime_header">
-			  <a href="javascript:;" title="上一周" class="prev_icon" role="prev_week"></a>
-			  <span><b role="year_selector"></b>年<b role="month_selector"></b>月</span><span style="margin-left: 20px;display: none">第<b role="week_selector"></b>周</span>
-			  <a href="javascript:;" title="下一周" class="next_icon" role="next_week"></a>
-		  </div>
-		  <ul role="weeks_ch" class="weeklyBox"></ul>
-		  <ul role="weeklyCanlendarView" class="weeklyCanlendarBox"></ul>
-		</div>
-	</div>
+				<div class="body1">
+					<h3>日程安排</h3>
+					<div id="j_weeklyCalendar" class="myWeeklyCanlendar">
+					  <div class="datetime_header">
+						  <a href="javascript:;" title="上一周" class="prev_icon" role="prev_week"></a>
+						  <span><b role="year_selector"></b>年<b role="month_selector"></b>月</span><span style="margin-left: 20px;display: none">第<b role="week_selector"></b>周</span>
+						  <a href="javascript:;" title="下一周" class="next_icon" role="next_week"></a>
+					  </div>
+					  <ul role="weeks_ch" class="weeklyBox"></ul>
+					  <ul role="weeklyCanlendarView" class="weeklyCanlendarBox"></ul>
+					</div>
+				</div>
+					<div class="body2">
+						<h3 id="list">您最近需要参加的会议</h3>
+						  <ol class="invitelist">
+							  <li class="list1" id="invite1">
+								<cite>
+								 <img alt="" src="images/gravatar.jpg" class="avatar" height="40" width="40" />
+								  {{某某某}}<!--邀请人姓名-->邀请您参加{{xxxx会议 }}<!--会议名称--> <br />
+								 <span class="invite-data">{{会议时间}} &nbsp;&nbsp;{{会议地点}}</span>
+								</cite>
+								<div class="info">
+								{{这里是会议的基本信息}}<!--会议基本信息-->
+								</div>
+							 </li>
+						  </ol>
+				   </div>
+				<div class="body3">
+			        <h3 id="list">历史会议列表</h3>
+			          <ol class="invitelist">
+				          <li class="list1" id="invite1">
+					        <cite>
+						     <img alt="" src="images/gravatar.jpg" class="avatar" height="40" width="40" />
+						      {{某某某}}<!--邀请人姓名-->邀请您参加{{xxxx会议 }}<!--会议名称--> <br />
+						     <span class="invite-data">{{会议时间}} &nbsp;&nbsp;{{会议地点}}</span>
+					        </cite>
+					        <div class="info">
+						    {{这里是会议的基本信息}}<!--会议基本信息-->
+					        </div>
+					        <div class="info">
+						    {{这里是会议的资料}}<!--会议上传资料-->
+								<form>
+									<input type="button" class="buit" value="查看资料">
+								</form>
+					        </div>
+				         </li>
+			          </ol>
+			   </div>
 </div>
+
 	<script src="js/weeklyCalendar.js"></script>
      <script type="text/javascript">
      // 默认周历

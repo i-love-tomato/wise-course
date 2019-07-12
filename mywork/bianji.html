@@ -114,10 +114,9 @@
 </head>
 <body id="i88" style="margin: 0">
     <div class = "pg_header">
-        <a class = "logo">LOGO</a>
         <a class = "pg_dl" id="i77">编辑</a>    
     </div>
-    <form name="tijiao" method="post" onSubmit="return check()" action="winford.top"><!--????-->
+    <form name="tijiao" method="post" onSubmit="return check()" action="home.html"><!--????-->
         <div class="left"></div>
         <div class="pg_body">
                 <div class="menu">用户名:</div>
@@ -139,7 +138,7 @@
                     </div>
                 <div class="menu">邮箱地址:</div>
                     <div class="kong">
-                        <input id="text4" type="text" name="01" onBlur="check()">
+                        <input id="text4" type="email" name="01" onBlur="check()">
                         <span id="div4" class="tian">*(为必填)<span>
                     </div>
 				<div class="menu">公司名:</div>
@@ -160,7 +159,7 @@
 		    <form method="post" action="home.html">
             <input  type="submit" name="002" value="确  认">
             <p style="width: 200px;display: inline-block;"></p>
-            <input  type="button" name="004" value="取  消">
+            <input  type="button" name="004" onclick="javascript:window.location.href='home.html'" value="取  消">
             </form>
         </div>
     </form>

@@ -1,32 +1,33 @@
 /* CSS Document */
 
 /*-------------------------	Top ----------------------------*/
-.top{
-left:10%;
-right:10%;
-width:80%;
-hight:10%;
-position:fixed;
-}
-#logo{
-    text-align: left;
 
-    font-weight: 700;
-    margin-bottom: 1em;
-    font-size: 38px; 
-	padding-left:10%;  
-}
+.top{
+    background: url(../images/tl.png) repeat-x  top;
+	position:absolute;
+	left:0px;
+	width:100%;
+	height:120px;
+	text-align:left;
+	opacity:0.8;
+	}
+	.top img{
+    text-align:left;
+    width:185px;
+    height:130px;
+    opacity:1;
+    }
 
 /*-------------------------	Sidebar --------------------------*/
 .sidebar{
 	float:left;
-	width:20%;
-	padding-top:15px;
+	width:200px;
+	padding-top:150px;
     padding-bottom: 40px;
-    position: fixed;
-    bottom: 0;
-    top: 15%;
-    left: 10%;
+    position: absolute;
+    top: 250px
+    left: 100px;
+    padding-left:100px;
 }
 .sidebar ul{
     text-align: center;
@@ -79,36 +80,38 @@ position:fixed;
 
 .sidebar div.sidebar_footer{
     position: absolute;
-    bottom: 40px;
     font-size: 14px;
     text-align: center;
-    width: 100%;
+    width: 200px;
     font-weight: 400;
     color:#67a5cd;
 }
 
 
-
 /*-------------------------	Body --------------------------*/
 .body{
-	float:right;
+
 	padding:10px 0 0 0;
-	width: 60%;
-	right:10%;
+	width: 600px;
 	buttom:7px;
-	top:15%;
-	left:30%;
-	position:fixed;
-	hight:85%;
+	top:150px;
+	left:300px;
+	height:850px;
+	position:absolute;
+
+
+
 }
 .body div.body_left{
+    left:10px;
     float:left;
-	width:20%;
-	hight:85%;
+    top:50px;
+	width:300px;
+	hight:850px;
+	position:absolute;
 }
-.body div.body_left table{
-    width:100%;
-	top:inherit;
+.body div.body_left t able{
+    width:1000px;
 	
 }
 .body div.body_left td{
@@ -120,13 +123,14 @@ position:fixed;
 }
 .body div.body_right{
     float:right;
-	width:45%;
-	right:10%;
-	hight:85%;
-	position:fixed;
+	width:450px;
+	left:150px;
+	hight:850px;
+	top:50px;
+	position:absolute;
 }
 .body div.body_right table{
-    width:100%;
+    width:1000px;
 }
 
 .body div.body_right td{
@@ -141,31 +145,31 @@ position:fixed;
 
 /* ------------------------------------------
    huiyiyaoqing/fabuchuangjian
-------------------------------------------- */ 
+------------------------------------------- */
 
 ol.invitelist {
 	margin: 15px 25px;
 	padding: 0;
-	border-style: solid;	
-	border-color: #DDC3A5;	
+	border-style: solid;
+	border-color: #DDC3A5;
 	border-width: 1px 1px 0 1px;
 }
 .invitelist li {
 	margin: 0;
 	padding: 15px 15px;
 	list-style: none;
-	border-bottom: 1px solid #E5D0BA; 
-	background: #F1EAD6;	
+	border-bottom: 1px solid #E5D0BA;
+	background: #F1EAD6;
 }
 .invitelist li cite {
 	display: block;
 	font-style: normal;
 	font-weight: bold;
-	padding: 7px;	
+	padding: 7px;
 }
 .invitelist li cite img {
 	float: left;
-	margin-right: 10px;	
+	margin-right: 10px;
 	border: 1px solid #E7CFCF;
 }
 .invitelist li cite .invite-data {

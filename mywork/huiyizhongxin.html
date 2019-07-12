@@ -14,7 +14,7 @@
 			        <img src="images/logo.png">
 			   </div>
 
-               <div class="sidebar">				
+               <div class="sidebar">
 					<ul>
 					    <li><a href="huiyiliebiao.html">会议列表</a></li>
 						<li class="selected"><a href="home.html">个人中心</a></li>
@@ -22,14 +22,14 @@
 						<li><a href="fabuchuangjian.html">发布创建</a></li>
 						<li><a href="fabuguanli.html">会议发布及管理</a></li>
 					</ul>
-					
+
 					<div class="sidebar_footer">
 					    <ul>
 						    <li><a href="contact.html">联系我们</a></li>
 						    <li><a href="set.html">设置</a></li>
 					    </ul>
 					</div>
-					
+
 			   </div>
 			   <div class="body">
 			        <div class="body_left">
@@ -40,7 +40,9 @@
 					   <tr>
 					    <td>
 						  <form method="post" action="bianji.html">
-						  <input type="submit" class="buit" value="编辑">
+						  <input type="submit" class="buit" value="提交"><br>
+                              <input type="button" class="buit" value="编辑"><br>
+                              <input type="button" class="buit" value="保存">
 						  </form>
 						</td>
 					   </tr>
@@ -49,27 +51,31 @@
 					<div class="body_right">
 					  <table>
 					   <tr>
-					    <td width="20%">用户名:</td>
+					    <td width="20%">会议编号:</td>
+					    <td width="80%">{{form.username}}</td> <!--从数据库传个人资料用户名-->
+					   </tr>
+                          <tr>
+					    <td width="20%">会议名称:</td>
 					    <td width="80%">{{form.username}}</td> <!--从数据库传个人资料用户名-->
 					   </tr>
 					   <tr>
-                        <td>手机号码:</td>
+                        <td>会议日期:</td>
 					    <td>{{form.phonenum}}</td> <!--从数据库传个人资料手机号-->
 					   </tr>
 					   <tr>
-					    <td>邮箱:</td>
+					    <td>会议开始和结束时间:</td>
 					    <td>{{form.mailnum}]</td> <!--从数据库传个人资料邮箱-->
-					   </tr>					   
+					   </tr>
                        <tr>
-					    <td>公司名:</td>
+					    <td>会议地点:</td>
 					    <td>{{form.company}}</td> <!--从数据库传个人资料公司名-->
 					   </tr>
                        <tr>
-					    <td>职位:</td>
+					    <td>会议主题:</td>
 					    <td>{{form.occupation}}</td> <!--从数据库传个人资料职位-->
 					   </tr>
 					   <tr>
-					    <td>我的奖品:</td>
+					    <td>会议简介:</td>
 					    <td>{{form.prize}}</td> <!--从数据库传个人资料奖品-->
 					   </tr>
 					  </table>

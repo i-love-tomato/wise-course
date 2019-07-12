@@ -19,7 +19,7 @@ def user_login(request):
 
     if request.method == "GET":
         login_form = LoginForm()
-        return render(request, "login/chushi.html", {"form":login_form})
+        return render(request, "login/chushi.html", {"form": login_form})
 
 
 def user_register(request):

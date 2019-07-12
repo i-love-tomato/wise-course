@@ -167,11 +167,13 @@ closeme();
 			<tr>
 			<form name="myform" method="post" >{% csrf_token %}
 			<td colspan="2" width=400px bgcolor="#FFFFFF" height=300px>
-				username: {{ form.username }}
-				<br>pasword:{{ form.password }}
+				用户名： {{ form.username }}
+				<br>密码:{{ form.password }}
 			<!--username: <input type="text" name="form.username" size="10">-->
 			<!--<br>pasword:<input type="password" name="form.password" size="12">-->
-
+				<br>{{ form.captcha.errors }}
+					{{ form.captcha.label_tag }}
+					{{ form.captcha }}
 
 			<br><input type="submit" class="button" name="logoin" value="登陆" >
 			<input type="button" class="button" name="exit" value="取消" onClick="closeme()">
