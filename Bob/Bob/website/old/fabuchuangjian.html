@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>home</title>
+<link rel="stylesheet" href="/old/css/style.css" type="text/css" />
+</head>
+
+<body>
+<div class="background">
+               <div class="top">
+			        <h1 id="logo">logo</h1>
+			   </div>
+
+               <div class="sidebar">				
+					<ul>
+					    <li><a href="/home/huiyiliebiao">会议列表</a></li>
+						<li><a href="/home">个人中心</a></li>
+						<li><a href="/home/huiyiyaoqing">收到的会议邀请</a></li>
+						<li class="selected"><a href="/home/fabuchuangjian">发布创建</a></li>
+						<li><a href="/home/fabuguanli">会议发布及管理</a></li>
+					</ul>
+					
+					<div class="sidebar_footer">
+					    <ul>
+						    <li><a href="contact.html">联系我们</a></li>
+						    <li><a href="set.html">设置</a></li>
+					    </ul>
+					</div>
+					
+			   </div>
+			   <div class="body">
+				   <form method="post" action="createmeet">
+					   <input type="submit" value="创建一个会议">
+				   </form>
+
+			          <ol class="invitelist">
+
+				          <li class="list1" id="invite1">
+					
+					        <cite>
+						     <img alt="" src="images/gravatar.jpg" class="avatar" height="40" width="40" />			
+						     草稿一：{{ meetingform.meetingn}}<br /><!--会议名字-->
+						     <span class="invite-data">创建于{{创建时间}} </span><!--创建时间-->
+					        </cite>
+							
+					        <div class="op">
+								<form>
+									<input type="button" value="发布">
+									<input type="button" value="删除">
+								</form>
+					        </div>		
+					
+				         </li>
+
+				    
+			          </ol>
+			   </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>home</title>
+<link rel="stylesheet" href="/static/css/style.css" type="text/css" />
+<link rel="stylesheet" href="/static/css/mine.css" type="text/css" />
+<link rel="shortcut icon" href="/static/images/favicon.ico" mce_href="/static/images/favicon.ico" type="image/x-icon"/>
+<script type="text/javascript">
+function out(){
+if(!confirm("确认要退出登录？")){
+window.event.returnValue = false;
+}
+}
+</script>
+
+</head>
+
+<body>
+<div class="background">
+               <div class="top">
+			        <img src="/static/images/logo.png">
+				   <a href="logout" onclick="return out()">退出登录</a>
+			   </div>
+               <div class="sidebar">				
+					<ul>
+					    <li><a href="/home">个人中心</a></li>
+                        <li><a href="/home/huiyiliebiao">会议列表</a></li>
+						<li><a href="/home/huiyiyaoqing">与会邀请</a></li>
+						<li class="selected"><a href="/home/fabuchuangjian">会议发布</a></li>
+						<li><a href="/home/fabuguanli">会议管理</a></li>
+					</ul>
+					
+					<div class="sidebar_footer">
+					    <ul>
+						    <li><a href="contact.html">联系我们</a></li>
+						    <li><a href="set.html">设置</a></li>
+					    </ul>
+					</div>
+					
+			   </div>
+			   <div class="body">
+				   <form method="post" action="mcreate.html">
+					   <input type="button" class="buit" value="创建一个会议" onclick="location = '/home/createmeet">
+				   </form>
+
+			          <ol class="invitelist">
+
+				          <li class="list1" id="invite1">
+					
+					        <cite>
+						     <img alt="" src="images/gravatar.jpg" class="avatar" height="40" width="40" />			
+						     草稿一：{{xxxx会议}}<br /><!--会议名字-->
+						     <span class="invite-data">创建于{{创建时间}} </span><!--创建时间-->
+					        </cite>
+							
+					        <div class="op">
+								<form>
+									<input type="button" class="buit" value="发布">
+									<input type="button" class="buit" value="删除">
+								</form>
+					        </div>		
+					
+				         </li>
+
+				    
+			          </ol>
+			   </div>
+</div>
+</body>
+</html>

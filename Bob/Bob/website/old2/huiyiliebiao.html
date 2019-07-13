@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html >
+    <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/old2/css/style.css" type="text/css" />
+<link rel="stylesheet" href="/old2/css/mine.css" type="text/css" />
+    <title>日程安排</title>
+    <style type="text/css">
+     .body1{
+	float:left;
+	width: 600px;
+	top:150px;
+	left:300px;
+	hight:300px;
+	position:absolute;
+    }
+    .body2{
+	float:left;
+	width: 600px;
+	buttom:7px;
+	top:450px;
+	left:300px;
+	hight:300px;
+	position:absolute;
+    }
+    .body3{
+	float:left;
+	width: 600px;
+	top:700px;
+	left:300px;
+	position:absolute;
+    }
+      h3 {margin-top: 40px;}
+
+      ul,li {list-style: none;}
+      .myWeeklyCanlendar {padding: 0;margin: 0}
+      .datetime_header {text-align: center;padding-top:15px;padding-bottom: 15px;font-size: 16px;border-bottom: 1px solid #dedede}
+      .prev_icon,
+      .next_icon {display: inline-block;vertical-align: top;width: 20px;height: 20px;}
+      .prev_icon {margin-right: 20px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBRjM4MjAyQTc1QkYxMUU3OEU5NUNEMTJBNTFEMzFDNSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBRjM4MjAyQjc1QkYxMUU3OEU5NUNEMTJBNTFEMzFDNSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkFGMzgyMDI4NzVCRjExRTc4RTk1Q0QxMkE1MUQzMUM1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkFGMzgyMDI5NzVCRjExRTc4RTk1Q0QxMkE1MUQzMUM1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+oFyXSAAAAd9JREFUeNqM1E1IFGEcx/HdJQ+Rq6dgr6V7SgWJrEviSyERZKbiqRBXhNq6qa14EDykZgXRrgaKkC4qQUYEBqEHXw7aC4l0SfSwVxWRTmWH7fvAf+DZh3lm9g8fhpln5sfzNk8wPLQfsNQ9tKPWeL6GaUyqm9+JszmNp1yCmjCDM/iDj9hBFlFcw1W8xl3M6R+HjLARLCCDapzGLXSjB7dRiMv4gdmi4YOkLXAIvRjEBRmarb7gEhKI66FO4A1pfIIBj6AlvDRG9FhC2/TAD9hDv09YPXb1hyzKUy7fMU9oSAW2okDmx1bLEnYHr1zam+XaGZLJ/oufHj2rk7D3bi/QS7WIR2oNQjK5i5awRelZoy1MK7U7Spx9uG00FmMVFajEVsC/fumLkjUagwg7IwrkV1k9sMxoPMZ5rMjqX88jMOoEquHctLxUg2/4nEeoWrSMCnwuv1ip5UW1aF+9Qtl/ES7qlHihAtPy3GsVq7TQmEv7W7mOO3PYIvPY5xO6iYtG7+Jy+sTYj/+cbfMOSfmXT2Qa3OqKcf9AvntD2JR52jxCCs+wbvbEqHIZfkrC2m0H7ENsyAGrVvcQn2TrqDqHBkTkvouwCb8TOy2n8H10yKmsl/rnRzEmJ3pO/RdgAImpc6oRs8i7AAAAAElFTkSuQmCC)
+      no-repeat}
+      .next_icon {margin-left: 20px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBNjRBQUZBMzc1QkYxMUU3OEY0NEFDQzI1NzVDODk5QSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBNjRBQUZBNDc1QkYxMUU3OEY0NEFDQzI1NzVDODk5QSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkE2NEFBRkExNzVCRjExRTc4RjQ0QUNDMjU3NUM4OTlBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkE2NEFBRkEyNzVCRjExRTc4RjQ0QUNDMjU3NUM4OTlBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+5IgMmAAAAeVJREFUeNqM1E9IFGEYx/HdJQ9idhP2KrkHzRAKNygTBEFFiMpCOhRiIeTaqX8rHQSJ/N9JS0gEdVERLEJQDDpVoKEYEdgfEjp0Kemwp6TD+n3hN/Du286sD3wYdmfmx8wz7/uEi/t+hXzqGtpQ5/z/BtOYMD/SyZKsk4dyBF3ADIrwF0v4igxiqMdZjOMq5uybI07YAJ7jB2pRiHO4g7s4j8M4hS3MHun/PeoX2Id76MUxvZpfvUc1kkjYoV5gk04+Qo9148M8weaN7iu01Q58ie944Nywgxqs+SXyUQY5bGKe0IgJvIwC9cetSTSoZ+sBT9qi442Imr2HTz4Xv0Ij4n6hPKX5iH/MN4ioucuh4FrVcokH9NSsjqNeDz+G8tdrlKun31DinP9if5RM6GCV1rEYYedcxg6sPEDYafzEBqJw92zMC/yA5jxhZ/AOn9XzXHXR7DATOKItVhYQ9hbb6uF/xfqLqqePTWBK/7/Ice0VK6wi4A0WdHzq9fCS+tjtXFilIeAbxtMlNH2usx7/eYGLGNVevm1db/b3iYAn69R9U4RNutPmFsYwrNc8GRB0XDtoTGFtfgO2S4NgRstjFysaHKZKtbej+t1B2LN8EzulKXwT7ZrKdpk9P4QnmuhZtS/AAK1fcwgha25zAAAAAElFTkSuQmCC)
+      no-repeat}
+      .prev_icon:active,
+      .next_icon:active,
+      .weeklyCanlendarBox li a:active {opacity: .8}
+      .weeklyBox,.weeklyCanlendarBox {overflow: hidden;font-size: 14px;}
+      .weeklyBox {padding-top: 10px;padding-bottom: 5px;}
+      .weeklyBox li {line-height: 30px}
+      .weeklyBox li,
+      .weeklyCanlendarBox li {float: left;display: inline;width: 14.28571428%;text-align: center;}
+      .weeklyCanlendarBox li a {display: inline-block;width: 30px;line-height: 30px;border-radius: 100%;color:#0d87ea;text-decoration: none;border:1px solid transparent}
+
+      .weeklyCanlendarBox li.active a {background:#0d87ea;color: #fff;}
+      .weeklyCanlendarBox li.clickActive a {border:1px solid #0d87ea}
+      .weeklyCanlendarBox li a.disabled {color: #ccc;pointer-events: none}
+    #Layer1 {
+	position:absolute;
+	width:1269px;
+	height:115px;
+	z-index:1;
+}
+    #Layer2 {
+	position:absolute;
+	width:230px;
+	height:115px;
+	z-index:1;
+}
+    #Layer3 {
+	position:absolute;
+	width:1035px;
+	height:39px;
+	z-index:2;
+	left: 232px;
+}
+    #Layer4 {
+	position:absolute;
+	width:1041px;
+	height:38px;
+	z-index:3;
+	left: 231px;
+	top: 40px;
+}
+    #Layer5 {
+	position:absolute;
+	width:1033px;
+	height:35px;
+	z-index:4;
+	left: 231px;
+	top: 80px;
+}
+    </style>
+    </head>
+<body>
+<div class="background">
+               <div class="top">
+			        <img src="images/logo.png">
+			   </div>
+
+               <div class="sidebar">
+					<ul>
+					    <li class="selected"><a href="/home/huiyiliebiao">会议列表</a></li>
+						<li><a href="/home">个人中心</a></li>
+						<li><a href="/home/huiyiyaoqing">收到的会议邀请</a></li>
+						<li><a href="/home/fabuchuangjian">发布创建</a></li>
+						<li><a href="/home/fabuguanli">会议发布及管理</a></li>
+					</ul>
+
+					<div class="sidebar_footer">
+					    <ul>
+						    <li><a href="contact.html">联系我们</a></li>
+						    <li><a href="set.html">设置</a></li>
+					    </ul>
+					</div>
+
+			   </div>
+				<div class="body1">
+					<h3>日程安排</h3>
+					<div id="j_weeklyCalendar" class="myWeeklyCanlendar">
+					  <div class="datetime_header">
+						  <a href="javascript:;" title="上一周" class="prev_icon" role="prev_week"></a>
+						  <span><b role="year_selector"></b>年<b role="month_selector"></b>月</span><span style="margin-left: 20px;display: none">第<b role="week_selector"></b>周</span>
+						  <a href="javascript:;" title="下一周" class="next_icon" role="next_week"></a>
+					  </div>
+					  <ul role="weeks_ch" class="weeklyBox"></ul>
+					  <ul role="weeklyCanlendarView" class="weeklyCanlendarBox"></ul>
+					</div>
+				</div>
+					<div class="body2">
+						<h3 id="list">您最近需要参加的会议</h3>
+						  <ol class="invitelist">
+							  <li class="list1" id="invite1">
+								<cite>
+								 <img alt="" src="/old2/images/gravatar.jpg" class="avatar" height="40" width="40" />
+								  {{某某某}}<!--邀请人姓名-->邀请您参加{{xxxx会议 }}<!--会议名称--> <br />
+								 <span class="invite-data">{{会议时间}} &nbsp;&nbsp;{{会议地点}}</span>
+								</cite>
+								<div class="info">
+								{{这里是会议的基本信息}}<!--会议基本信息-->
+								</div>
+							 </li>
+						  </ol>
+				   </div>
+				<div class="body3">
+			        <h3 id="list">历史会议列表</h3>
+			          <ol class="invitelist">
+				          <li class="list1" id="invite1">
+					        <cite>
+						     <img alt="" src="/old2/images/gravatar.jpg" class="avatar" height="40" width="40" />
+						      {{某某某}}<!--邀请人姓名-->邀请您参加{{xxxx会议 }}<!--会议名称--> <br />
+						     <span class="invite-data">{{会议时间}} &nbsp;&nbsp;{{会议地点}}</span>
+					        </cite>
+					        <div class="info">
+						    {{这里是会议的基本信息}}<!--会议基本信息-->
+					        </div>
+					        <div class="info">
+						    {{这里是会议的资料}}<!--会议上传资料-->
+								<form>
+									<input type="button" class="buit" value="查看资料">
+								</form>
+					        </div>
+				         </li>
+			          </ol>
+			   </div>
+</div>
+
+	<script src="/old2/js/weeklyCalendar.js"></script>
+     <script type="text/javascript">
+     // 默认周历
+      weeklyCalendar('#j_weeklyCalendar',{
+        //点击日期回调
+        clickDate:function(dateTime){
+          console.log(dateTime);
+        }
+      });  
+      
+     </script>
+	
+  </body>
+</html>

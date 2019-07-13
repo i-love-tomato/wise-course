@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>home</title>
+<link rel="stylesheet" href="/old2/css/style.css" type="text/css" />
+<link rel="stylesheet" href="/old2/css/mine.css" type="text/css" />
+</head>
+
+<body>
+<div class="background">
+               <div class="top">
+			        <img src="images/logo.png">
+			   </div>
+
+               <div class="sidebar">				
+					<ul>
+					    <li><a href="/home/huiyiliebiao">会议列表</a></li>
+						<li><a href="/home">个人中心</a></li>
+						<li class="selected"><a href="/home/huiyiyaoqing">收到的会议邀请</a></li>
+						<li><a href="/home/fabuchuangjian">发布创建</a></li>
+						<li><a href="/home/fabuguanli">会议发布及管理</a></li>
+					</ul>
+					
+					<div class="sidebar_footer">
+					    <ul>
+						    <li><a href="contact.html">联系我们</a></li>
+						    <li><a href="set.html">设置</a></li>
+					    </ul>
+					</div>
+					
+			   </div>
+			   <div class="body">
+			        <h3 id="list">您收到了新的邀请函：</h3>
+
+			          <ol class="invitelist">
+
+				          <li class="list1" id="invite1">
+					
+					        <cite>
+						     <img alt="" src="images/gravatar.jpg" class="avatar" height="40" width="40" />			
+						      {{某某某}}<!--邀请人姓名-->邀请您参加{{xxxx会议 }}<!--会议名称--> <br />
+						     <span class="invite-data">{{会议时间}} &nbsp;&nbsp;{{会议地点}}</span>
+					        </cite>
+							
+					        <div class="info">
+						    {{这里是会议的基本信息}}<!--会议基本信息-->
+								<form>
+									<input type="button" class="buit" value="我要报名">
+								</form>
+					        </div>		
+					
+				         </li>
+
+				        
+			          </ol>
+			   </div>
+</div>
+</body>
+</html>

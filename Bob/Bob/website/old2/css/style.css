@@ -1,0 +1,193 @@
+/* CSS Document */
+
+/*-------------------------	Top ----------------------------*/
+
+.top{
+    background: url(../images/tl.png) repeat-x  top;
+	position:absolute;
+	left:0px;
+	width:100%;
+	height:120px;
+	text-align:left;
+	opacity:0.8;
+	}
+	.top img{
+    text-align:left;
+    width:185px;
+    height:130px;
+    opacity:1;
+    }
+
+/*-------------------------	Sidebar --------------------------*/
+.sidebar{
+	float:left;
+	width:200px;
+	padding-top:150px;
+    padding-bottom: 40px;
+    position: absolute;
+    top: 250px
+    left: 100px;
+    padding-left:100px;
+}
+.sidebar ul{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+	background:url(images/shad2.png) no-repeat;
+}
+
+.sidebar ul li.selected a{
+	color:#492606;
+	text-shadow: 0 1px 0 #fff;
+	background-color:#FFFFFF;
+	
+	vertical-align:middle;
+}
+.sidebar ul li a:hover{
+	text-decoration: none;
+	background:#ebebeb url(images/border.png) no-repeat;
+	color:#67a5cd;
+}
+.sidebar ul li{
+    margin: 0 0 20px 0;
+    padding: 0;
+	list-style:none;
+}
+.sidebar ul li a{
+    text-decoration: none;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    padding: 10px 10px;
+    letter-spacing: .2em;
+
+	background:#cbcbcb url(images/border.png) no-repeat;
+	color:#174867;
+	width:70%;
+	display:block;
+	text-decoration:none;
+	
+	-webkit-transition:all 0.3s ease-out;
+	-moz-transition:all 0.3s ease-out;
+	-o-transition:all 0.3s ease-out;
+	
+	-webkit-box-shadow:2px 2px 4px #888;
+	-moz-box-shadow:2px 2px 4px #888;
+	-o-box-shadow:2px 2px 4px #888;
+}
+
+.sidebar div.sidebar_footer{
+    position: absolute;
+    font-size: 14px;
+    text-align: center;
+    width: 200px;
+    font-weight: 400;
+    color:#67a5cd;
+}
+
+
+/*-------------------------	Body --------------------------*/
+.body{
+
+	padding:10px 0 0 0;
+	width: 600px;
+	buttom:7px;
+	top:150px;
+	left:300px;
+	height:850px;
+	position:absolute;
+
+
+
+}
+.body div.body_left{
+    left:10px;
+    float:left;
+    top:50px;
+	width:300px;
+	hight:850px;
+	position:absolute;
+}
+.body div.body_left t able{
+    width:1000px;
+	
+}
+.body div.body_left td{
+    text-align:left;
+    height:80px;
+    vertical-align:middle;
+	padding:10px;
+
+}
+.body div.body_right{
+    float:right;
+	width:450px;
+	left:150px;
+	hight:850px;
+	top:50px;
+	position:absolute;
+}
+.body div.body_right table{
+    width:1000px;
+}
+
+.body div.body_right td{
+    text-align:left;
+    vertical-align:middle;
+	padding:10px;
+}
+.body div.body_left.pho{
+    width:80px;
+	height:60px;
+}
+
+/* ------------------------------------------
+   huiyiyaoqing/fabuchuangjian
+------------------------------------------- */
+
+ol.invitelist {
+	margin: 15px 25px;
+	padding: 0;
+	border-style: solid;
+	border-color: #DDC3A5;
+	border-width: 1px 1px 0 1px;
+}
+.invitelist li {
+	margin: 0;
+	padding: 15px 15px;
+	list-style: none;
+	border-bottom: 1px solid #E5D0BA;
+	background: #F1EAD6;
+}
+.invitelist li cite {
+	display: block;
+	font-style: normal;
+	font-weight: bold;
+	padding: 7px;
+}
+.invitelist li cite img {
+	float: left;
+	margin-right: 10px;
+	border: 1px solid #E7CFCF;
+}
+.invitelist li cite .invite-data {
+	font-size: .8em;
+	font-weight: normal;
+}
+.commentlist li .info {
+	clear: both;
+	margin: 0; padding: 0;
+}
+.commentlist li .info p{
+	padding-left: 12px;
+}
+.commentlist li.list {
+	background: #EEE1D5;
+}
+.commentlist li .op {
+	clear: both;
+	margin: 0; padding: 0;
+}
+

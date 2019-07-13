@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>home</title>
+<link rel="stylesheet" href="/static/css/style.css" type="text/css" />
+<link rel="stylesheet" href="/static/css/mine.css" type="text/css" />
+<link rel="shortcut icon" href="/static/images/favicon.ico" mce_href="/static/images/favicon.ico" type="image/x-icon"/>
+<script type="text/javascript">
+function out(){
+if(!confirm("确认要退出登录？")){
+window.event.returnValue = false;
+}
+}
+</script>
+
+</head>
+
+<body>
+<div class="background">
+               <div class="top">
+			        <img src="/static/images/logo.png">
+				   <a href="/logout" onclick="return out()">退出登录</a>
+			   </div>
+               <div class="sidebar">				
+					<ul>
+					    <li><a href="/home">个人中心</a></li>
+                        <li><a href="/home/huiyiliebiao">会议列表</a></li>
+						<li><a href="/home/huiyiyaoqing">与会邀请</a></li>
+						<li><a href="/home/fabuchuangjian">会议发布</a></li>
+						<li class="selected"><a href="/home/fabuguanli">会议管理</a></li>
+					</ul>
+					
+					<div class="sidebar_footer">
+					    <ul>
+						    <li><a href="contact.html">联系我们</a></li>
+						    <li><a href="set.html">设置</a></li>
+					    </ul>
+					</div>
+					
+			   </div>
+			   <div class="body">
+			          <h3 id="list">已发布的会议</h3>
+
+			          <ol class="invitelist">
+
+				          <li class="list1" id="invite1">
+					
+					        <cite>
+						     <img alt="" src="images/gravatar.jpg" class="avatar" height="40" width="40" />			
+						     {{会议名称}} <br /><!--已发布的会议名称-->
+						     <span class="invite-data">{{发布时间}} </span><!--发布时间-->
+							 </cite>
+							
+					        <div class="op">
+								<form>
+									<input type="file"  accept="image/*,video/*,application/zip" value="上传资料">
+									<input type="button" class="buit" value="邀请成员">
+								</form>
+					        </div>		
+					
+				         </li>
+				       
+			          </ol>
+			   </div>
+</div>
+</body>
+</html>

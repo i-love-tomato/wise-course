@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>chushi</title>
+<style type="text/css">
+<!--
+.button1 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#div1 {
+display: none;
+position: absolute;
+z-index: 1000;
+height: 100%;
+width: 100%;
+background: #000000;
+filter:Alpha(opacity=30);
+}
+#div2 {
+display: none;
+position: absolute;
+height: 400px;
+width: 400px;
+padding-top: 10%;
+z-index: 1001;
+left: -900px;
+top: -10px;
+}
+#top1 {
+	position:absolute;
+	width:100%;
+	height:250px;
+	z-index:2;
+	left: 0px;
+	top: 1px;
+}
+#Layer1 {
+	position:absolute;
+	width:30%;
+	height:100%;
+	z-index:1;
+	left: 0px;
+	top: 1px;
+}
+#Layer2 {
+	position:absolute;
+	width:40%;
+	height:100%;
+	z-index:2;
+	left: 30%;
+	top: 1px;
+}
+#Layer3 {
+	position:absolute;
+	width:30%;
+	height:100%;
+	z-index:3;
+	left: 70%;
+	top: 1px;
+}
+
+#Layer4 {
+	position:absolute;
+	width:100%;
+	height:50px;
+	z-index:3;
+	left: 0px;
+	top: 250px;
+	background-color: #FF99CC;
+}
+#Layer5 {
+	position:absolute;
+	width:15%;
+	height:100%;
+	z-index:4;
+	left: 0px;
+	top: 0;
+	background-color: #FF9933;
+}
+.STYLE4 {
+	font-family: "华文楷体";
+	font-size: 36px;
+
+}
+#Layer6 {
+	position:absolute;
+	width:7%;
+	height:50px;
+	top:250px;
+	left:85%;
+	z-index:5;
+	background-color: #FF9933;
+}
+#Layer7 {
+	position:absolute;
+	width:7%;
+	height:100%;
+	left:93%;
+	z-index:5;
+	background-color: #FF9933;
+}
+#Layer8 {
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index:4;
+	top:300px;
+	background-position:center
+}
+#Layer9 {
+	position:absolute;
+	margin: 0 auto;
+
+	width:1200px;
+	height:100%;
+	z-index:6;
+}
+</style>
+<script>
+function openme(){
+document.getElementById('div1').style.display='block';
+document.getElementById('div2').style.display='block';
+}
+function closeme(){
+document.getElementById('div1').style.display='none';
+document.getElementById('div2').style.display='none';
+}
+function logo_in(){alert()
+//验证
+//转向...
+//myform.action=""
+//myform.submit()
+closeme();
+}
+</script>
+<body >
+<div id="Layer9">
+	<div id="top1">
+		<div id="Layer1"><img src="/old/images/1.jpg" alt="hello" width="100%" height="100%"></div>
+		<div id="Layer2"><img src="/old/images/2.jpg" width="100%" height="100%"></div>
+		<div id="Layer3"><img src="/old/images/3.jpg" width="100%" height="100%"></div>
+	</div>
+
+	<div id="Layer4">
+		<div class="STYLE4" id="Layer5" align="center">联系我们</div>
+		<div class="STYLE4" id="Layer7" align="center"><a href="zhuce">注册</a></div>
+	</div>
+	<div id="Layer8"><img src="/old/images/004.png" width=100% height=100%></div>
+	<div class="STYLE4" id="Layer6">
+			<div id="div1"></div>
+			<div id="div2">
+			<table width=400px height=300px border="0" cellpadding="3" cellspacing="1" style="background: #ff7300; position:static;filter:progid:DXImageTransform.Microsoft.DropShadow(color=#666666,offX=4,offY=4,positives=true)" align="center">
+			<tr id="m_tr">
+			<td><font color="#FFFFFF">欢迎登陆：</font></td>
+			<td align="right">
+			<input type="button" value="ｘ" onClick="closeme()" style="cursor: hand;">
+			</td>
+			</tr>
+			<tr>
+			<form name="myform" method="post" >{% csrf_token %}
+			<td colspan="2" width=400px bgcolor="#FFFFFF" height=300px>
+				username: {{ form.username }}
+				<br>password:{{ form.password }}
+			<!--username: <input type="text" name="form.username" size="10">-->
+			<!--<br>pasword:<input type="password" name="form.password" size="12">-->
+
+
+			<br><input type="submit" class="button" name="logoin" value="登陆" >
+			<input type="button" class="button" name="exit" value="取消" onClick="closeme()">
+			</td>
+			</form>
+			</tr>
+			</table>
+			</div>
+			<div>
+			<input name="button" class="button1" type="button" onClick="openme()" value="登陆" >
+			</div>
+	</div>
+</div>
+</body>
+</html>
+

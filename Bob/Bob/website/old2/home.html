@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="images/favicon.ico" mce_href="images/favicon.ico" type="image/x-icon"/>
+<title>home</title>
+<link rel="stylesheet" href="/old2/css/style.css" type="text/css" />
+<link rel="stylesheet" href="/old2/css/mine.css" type="text/css" />
+</head>
+
+<body>
+<div class="background">
+               <div class="top">
+			        <img src="/old2/images/Logo.png">
+			   </div>
+
+               <div class="sidebar">				
+					<ul>
+                        <li class="selected"><a href="/home">个人中心</a></li>
+                        <li><a href="/home/huiyiliebiao">会议列表</a></li>
+						<li><a href="/home/huiyiyaoqing">收到的会议邀请</a></li>
+						<li><a href="/home/fabuchuangjian">发布创建</a></li>
+						<li><a href="/home/fabuguanli">会议发布及管理</a></li>
+					</ul>
+					
+					<div class="sidebar_footer">
+					    <ul>
+						    <li><a href="contact.html">联系我们</a></li>
+						    <li><a href="set.html">设置</a></li>
+					    </ul>
+					</div>
+					
+			   </div>
+			   <div class="body">
+			        <div class="body_left">
+					  <table>
+					   <tr>
+					    <td class="pho">{{form.photo}]</td>   <!--从数据库传个人资料头像-->
+					   </tr>
+					   <tr>
+					    <td>
+						  <form method="post" action="modification.html">
+						  <input type="submit" class="buit" value="编辑">
+						  </form>
+						</td>
+					   </tr>
+					  </table>
+			        </div>
+					<div class="body_right">
+					  <table>
+					   <tr>
+					    <td width="20%">用户名:</td>
+					    <td width="80%">{{form.username}}</td> <!--从数据库传个人资料用户名-->
+					   </tr>
+					   <tr>
+                        <td>手机号码:</td>
+					    <td>{{form.phonenum}}</td> <!--从数据库传个人资料手机号-->
+					   </tr>
+					   <tr>
+					    <td>邮箱:</td>
+					    <td>{{form.mailnum}]</td> <!--从数据库传个人资料邮箱-->
+					   </tr>					   
+                       <tr>
+					    <td>公司名:</td>
+					    <td>{{form.company}}</td> <!--从数据库传个人资料公司名-->
+					   </tr>
+                       <tr>
+					    <td>职位:</td>
+					    <td>{{form.occupation}}</td> <!--从数据库传个人资料职位-->
+					   </tr>
+					   <tr>
+					    <td>我的奖品:</td>
+					    <td>{{form.prize}}</td> <!--从数据库传个人资料奖品-->
+					   </tr>
+					  </table>
+					</div>
+			   </div>
+</div>
+</body>
+</html>

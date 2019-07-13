@@ -1,0 +1,24 @@
+.buit{
+        width: 100px;
+        padding:8px;
+        background-color: #428bca;
+        border-color: #357ebd;
+        color: #fff;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px; /* future proofing */
+        -khtml-border-radius: 10px; /* for old Konqueror browsers */
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid transparent;
+        font-weight: 900;
+        font-size:80%
+      }
+body div.background{
+width:1000px;
+height:1000px;
+background:url('../images/4.jpg') repeat center top;
+position:absolute;
+left:0; right:0;top:0;bottom:0;
+margin:0px auto;
+}
