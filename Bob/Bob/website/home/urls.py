@@ -5,10 +5,10 @@ from . import views
 
 urlpatterns = [
     path('', views.user_home, name='user_home'),
-    path('bianji/', views.user_bianji),
-    path('fabuchuangjian/', views.user_fabuchuangjian),
-    path('fabuguanli/', views.user_fabuguanli),
-    path('huiyiliebiao/', views.user_huiyiliebiao),
-    path('huiyiyaoqing/', views.user_huiyiyaoqing),
-    path('createmeet/', views.user_createmeet),
+    path('info_revise/', views.user_info_revise),
+    path('publish/', views.user_publish),
+    path('mcreate', views.user_mcreate),
+    path('manage/', views.user_manage),
+    path('invitation/', views.user_invitation),
+    path('mlist/', views.user_mlist),
 ]

@@ -3,7 +3,7 @@
 /*-------------------------	Top ----------------------------*/
 
 .top{
-    background: url(../images/tl.png) repeat-x  top;
+    background: url(/static/images/tl.png) repeat-x  top;
 	position:absolute;
 	left:0px;
 	width:100%;
@@ -34,27 +34,25 @@
 	padding-top:150px;
     padding-bottom: 40px;
     position: absolute;
-    top: 250px
-    left: 100px;
     padding-left:100px;
 }
 .sidebar ul{
     text-align: center;
     margin: 0;
     padding: 0;
-	background:url(images/shad2.png) no-repeat;
+	background:url(/static/images/shad2.png) no-repeat;
 }
 
 .sidebar ul li.selected a{
 	color:#492606;
 	text-shadow: 0 1px 0 #fff;
 	background-color:#FFFFFF;
-	
+
 	vertical-align:middle;
 }
 .sidebar ul li a:hover{
 	text-decoration: none;
-	background:#ebebeb url(images/border.png) no-repeat;
+	background:#ebebeb url(/static/images/border.png) no-repeat;
 	color:#67a5cd;
 }
 .sidebar ul li{
@@ -72,16 +70,16 @@
     padding: 10px 10px;
     letter-spacing: .2em;
 
-	background:#cbcbcb url(images/border.png) no-repeat;
+	background:#cbcbcb url(/static/images/border.png) no-repeat;
 	color:#174867;
 	width:70%;
 	display:block;
 	text-decoration:none;
-	
+
 	-webkit-transition:all 0.3s ease-out;
 	-moz-transition:all 0.3s ease-out;
 	-o-transition:all 0.3s ease-out;
-	
+
 	-webkit-box-shadow:2px 2px 4px #888;
 	-moz-box-shadow:2px 2px 4px #888;
 	-o-box-shadow:2px 2px 4px #888;
@@ -121,7 +119,7 @@
 }
 .body div.body_left t able{
     width:1000px;
-	
+
 }
 .body div.body_left td{
     text-align:left;
@@ -148,12 +146,13 @@
 	padding:10px;
 }
 .body div.body_left.pho{
-    width:80px;
-	height:60px;
+    width:20px;
+	height:20px;
 }
 
+
 /* ------------------------------------------
-   huiyiyaoqing/fabuchuangjian
+   /invitation/mcreate
 ------------------------------------------- */
 
 ol.invitelist {

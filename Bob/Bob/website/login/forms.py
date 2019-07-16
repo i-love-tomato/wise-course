@@ -2,7 +2,7 @@
 # coding:utf-8
 from django import forms
 from django.contrib.auth.models import User
-from .models import UserProfile
+from .models import UserProfile, Photo
 from captcha.fields import CaptchaField
 
 
@@ -18,7 +18,7 @@ class RegistrationForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ("username", "email")
+        fields = ("username",)
 
     def clean_password2(self):
         cd = self.cleaned_data
@@ -30,7 +30,10 @@ class RegistrationForm(forms.ModelForm):
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ("phone", "realname", "sex", "hobby", "introduction")
+        fields = ("phone", "realname", "sex", "hobby", "introduction", "position", "email", "company")
 
 
-
+class UserphotoForm(forms.ModelForm):
+    class Meta:
+        model = Photo
+        fields = ("image",)

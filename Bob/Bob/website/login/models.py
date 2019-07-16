@@ -8,12 +8,15 @@ class UserProfile(models.Model):
         ('female', '女'),
     )
     user = models.OneToOneField(User, on_delete=models.CASCADE, unique=True)
-    realname = models.CharField(max_length=50)
+    realname = models.CharField(max_length=50, blank=True)
     sex = models.CharField(max_length=32, choices=gender, default='男')
-    hobby = models.CharField(max_length=50)
+    hobby = models.CharField(max_length=50, blank=True)
     birth = models.DateField(blank=True, null=True)
-    phone = models.CharField(max_length=20, null=True)
-    workplace = models.CharField(max_length=50)
+    email = models.CharField(max_length=50, blank=True)
+    phone = models.CharField(max_length=20, blank=True)
+    workplace = models.CharField(max_length=50, blank=True)
+    company = models.CharField(max_length=50, blank=True)  #公司
+    position = models.CharField(max_length=50, blank=True)  #职位
     lastLogin = models.DateTimeField(auto_now=True)  # 上次登录时间
     c_time = models.DateField(auto_now_add=True) #注册时间
     introduction = models.CharField(max_length=100, blank=True)  #个性签名   blank=True  允许为空
@@ -23,3 +26,11 @@ class UserProfile(models.Model):
 
     class Meta:
         ordering = ['c_time']
+
+
+class Photo(models.Model):
+    id = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+    image = models.ImageField(upload_to='images/', blank=True)
+
+    class Meta:
+        db_table = 'Photo'
