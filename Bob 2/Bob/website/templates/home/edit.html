@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body><!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="images/favicon.ico" mce_href="images/favicon.ico" type="image/x-icon"/>
+<title>home</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/mine.css" type="text/css" />
+	<script type="text/javascript">
+function out(){
+if(!confirm("确认要退出登录？")){
+window.event.returnValue = false;
+}
+}
+</script>
+<style>
+        .pg_header{
+            position: fixed;
+            height: 48px;
+            top: -300px;
+            left: 0;
+            right: 0;
+            background-color: #2459a2;
+            line-height: 48px;
+        }
+        .pg_header .logo{
+            margin: 0 auto;
+            float: left;
+            width: 200px;
+            text-align: center;
+            line-height: 48px;
+            font-size: 28px;
+            color: white;
+        }
+        .pg_dl{
+            left: 400px;
+            display: inline-block;
+            padding: 0 40px;
+            color: white;
+        }
+        .pg_header .pg_dl:hover{
+            background-color: #2459fb;
+            cursor: pointer;
+        }
+        .left{
+            margin-top: 20px;
+            width: 400px;
+            display: inline-block;
+            float: left;
+        }
+        .pg_body{
+            margin-top: 50px;
+            font-size: 18px;
+            display: inline-block;
+            width: 200px;
+        }
+        .pg_body .menu{
+            width: 800px;
+            padding: 15px;
+            float: left;
+            font-weight: bold;
+        }
+        input[type="text"]{
+            width: 200px;
+            height: 25px;
+            border-radius: 6px;
+        }
+        input[type="password"]{
+            width: 200px;
+            height: 25px;
+            border-radius: 6px;
+        }
+        input[type="button"]{
+            background-color: #555555;
+               border: none;
+            color: white;
+            padding: 12px 29px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 17px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]{
+            background-color: #555555;
+               border: none;
+            color: white;
+            padding: 12px 29px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 17px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .kong{
+            margin-top: -54px;
+            margin-left: 200px;
+            float:left;
+            padding: 15px;
+        }
+        .img{
+            width: 50px;
+            height: 40px;
+        }
+        .can{
+            width: 1220px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 auto;
+            display: inline-block;
+        }
+        .tian{
+            color: red;
+            float: right;
+            font-size: 12px;
+            margin-right: -120px;
+            margin-top: -25px;
+        }
+    </style>
+
+<body>
+<div class="background">
+               <div class="top">
+			        <img src="images/logo.png">
+				   <a href="login.html" onclick="return out()">退出登录</a>
+			   </div>
+
+               <div class="sidebar">
+					<ul>
+					    <li><a href="huiyiliebiao.html">会议列表</a></li>
+						<li class="selected"><a href="home.html">个人中心</a></li>
+						<li><a href="huiyiyaoqing.html">收到的会议邀请</a></li>
+						<li><a href="fabuchuangjian.html">发布创建</a></li>
+						<li><a href="fabuguanli.html">会议发布及管理</a></li>
+					</ul>
+
+					<div class="sidebar_footer">
+					    <ul>
+						    <li><a href="contact.html">联系我们</a></li>
+						    <li><a href="set.html">设置</a></li>
+					    </ul>
+					</div>
+
+			   </div>
+			   <div class="body">
+			        <div class="body_left">
+					  <table>
+					   <tr>
+					    <td class="pho">{{form.photo}]</td>   <!--从数据库传个人资料头像-->
+					   </tr>
+					   <tr>
+					    <td>
+							<a href="bianji.html" class="buit" style="font-size:20px;text-decoration=none;">编辑</a>
+						</td>
+					   </tr>
+					  </table>
+			        </div>
+					<div class="body_right"  style="top:-100px;">
+					      <form name="tijiao" method="post" onsubmit="return check()" action="chushi.html">
+							<div class="left"></div>
+							<div class="pg_body">
+									<div class="menu">真实姓名：</div>
+										<div class="kong">
+<!--                                        {{userprofile.realname}}
+											<input id="text1" type="text" name="01" placeholder="请输入用户名" onblur="check()"><span id="div1" class="tian" style="margin-top: 4px">*(为必填)</span>
+-->
+										</div>
+									<div class="menu">手机号码:</div>
+										<div class="kong">
+                                            {{userprofile.phone}}
+											<!--<input id="i2" type="text" name="01">-->
+										</div>
+									<div class="menu">邮箱地址:</div>
+										<div class="kong">
+                                            {{userprofile.email}}
+											<!--<input id="text4" type="text" name="01" onblur="check()">-->
+											<span id="div4" class="tian">*(为必填)<span>
+										</div>
+                                    <div class="menu">公司名称：:</div>
+										<div class="kong">
+                                            {{userprofile.company}}
+											<!--<input id="text4" type="text" name="01" onblur="check()">-->
+											<span id="div4" class="tian">*(为必填)<span>
+										</div>
+                                   <div class="menu">职位:</div>
+										<div class="kong">
+                                            {{userprofile.position}}
+											<!--<input id="text4" type="text" name="01" onblur="check()">-->
+											<span id="div4" class="tian">*(为必填)<span>
+										</div>
+									<div class="menu">头像上传:    </div>
+										<div class="kong">
+											<input type="file" name="file" value="选择头像" accept="image/*">
+									</div>
+							</div>
+							<div class="menu">
+							<div class="left"></div>
+									<input  type="submit" name="002" value="注  册">
+									<p style="width: 200px;display: inline-block;"></p>
+									<input  type="button" name="004" onclick="javascript:window.location.href='chushi.html'" value="取  消">
+							</div>
+                              <div><a href="/home/info_revise" class="buit" style="font-size:20px;text-decoration=none;">编辑</a></div>
+
+						</form>
+					</div>
+			   </div>
+</div>
+</body>
+</html>
+
+</html>

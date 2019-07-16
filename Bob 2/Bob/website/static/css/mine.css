@@ -1,0 +1,64 @@
+.buit{
+        width: 100px;
+        padding:8px;
+        background-color: #428bca;
+        border-color: #357ebd;
+        color: #fff;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px; /* future proofing */
+        -khtml-border-radius: 10px; /* for old Konqueror browsers */
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid transparent;
+        font-weight: 900;
+        font-size:80%
+      }
+body div.background{
+		width:1000px;
+		height:1000px;
+		background:url('../images/4.jpg') repeat center top;
+		position:absolute;
+		left:0; right:0;top:0;bottom:0;
+		margin:0px auto;
+}
+.con4 {
+	width: 300px;
+	height: auto;
+	overflow: hidden;
+	margin: 20px auto;
+	color: #FFFFFF;
+}
+
+.con4 .btn {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #d8b49c;
+	display: block;
+	font-size: 16px;
+	border-radius: 5px;
+}
+
+.upload {
+	float: left;
+	position: relative;
+}
+
+.upload_pic {
+	display: block;
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	border-radius: 5px;
+}
+
+#cvs {
+	border: 1px solid #000;
+	margin: 20px 0 20px 50px;
+	background :url(/media/images/1.jpg);
+}

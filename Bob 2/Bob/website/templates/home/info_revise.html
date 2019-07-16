@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>home</title>
+	<script src="http://www.codefans.net/ajaxjs/jquery-1.6.2.min.js"></script>
+<link rel="shortcut icon" href="/static/images/favicon.ico" mce_href="/static/images/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="/static/css/style.css" type="text/css" />
+<link rel="stylesheet" href="/static/css/mine.css" type="text/css" />
+
+	<script type="text/javascript">
+	function out(){
+	if(!confirm("确认要退出登录？")){
+	window.event.returnValue = false;
+	}
+	}
+	</script>
+
+
+</head>
+
+<body>
+		<div class="background">
+	           <div class="top">
+			        <img src="/static/images/Logo.png">
+				   <a href="/logout" onclick="return out()">退出登录</a>
+			   </div>
+
+               <div class="sidebar">
+					<ul>
+                        <li class="selected"><a href="/home">个人中心</a></li>
+                        <li><a href="/home/mlist">会议列表</a></li>
+						<li><a href="/home/invitation">与会邀请</a></li>
+						<li><a href="/home/publish">会议发布</a></li>
+						<li><a href="/home/manage">会议管理</a></li>
+					</ul>
+
+					<div class="sidebar_footer">
+					    <ul>
+						    <li><a href="contact.html">联系我们</a></li>
+						    <li><a href="set.html">设置</a></li>
+					    </ul>
+					</div>
+
+			   </div>
+
+			   <div class="body">
+			        <div class="body_left">
+                     	{% if photo.image %}
+						<img src="/media/{{ photo.image}}" style="height:100px;width:100px;border-radius:50px;" id="img0">
+						{% else %}
+						<img src="/media/images/default.jpg" name=image style="height:100px;width:100px;border-radius:50px;" id="img0">
+						{% endif %}
+					<div class="choose">
+							<div style="position:relative;top:-105px;">
+								<form name="" method="post" onsubmit="return check()" enctype="multipart/form-data" >  {% csrf_token %}
+							<!--<form name="form0" id="form0" >-->
+								<input type="file" name="image" id="file0" multiple="multiple" style="opacity:0;height:100px;width:100px;" />
+								<script>
+									$("#file0").change(function(){
+										var objUrl = getObjectURL(this.files[0]) ;
+										console.log("objUrl = "+objUrl) ;
+										if (objUrl) {
+											$("#img0").attr("src", objUrl) ;
+										}
+									}) ;
+
+									function getObjectURL(file) {
+										var url = null ;
+										if (window.createObjectURL!=undefined) { // basic
+											url = window.createObjectURL(file) ;
+										} else if (window.URL!=undefined) { // mozilla(firefox)
+											url = window.URL.createObjectURL(file) ;
+										} else if (window.webkitURL!=undefined) { // webkit or chrome
+											url = window.webkitURL.createObjectURL(file) ;
+										}
+										return url ;
+									}
+								</script>
+
+
+							</div>
+						</div>
+			        </div>
+					<div class="body_right">
+					 <!--<form name="" method="post" onsubmit="return check()">-->
+							<div class="left"></div>
+							<div class="pg_body">
+									<div class="menu">真实姓名：</div>
+										<div class="kong">
+                                       {{personal_form.realname}}
+											<!--<input id="text1" type="text" name="01" placeholder="请输入用户名" onblur="check()"><span id="div1" class="tian" style="margin-top: 4px">*(为必填)</span>
+-->
+										</div>
+									<div class="menu">手机号码:</div>
+										<div class="kong">
+                                            {{personal_form.phone}}
+											<!--<input id="i2" type="text" name="01">-->
+										</div>
+									<div class="menu">邮箱地址:</div>
+										<div class="kong">
+                                            {{personal_form.email}}
+											<!--<input id="text4" type="text" name="01" onblur="check()">-->
+											<span id="div4" class="tian">*(为必填)<span>
+										</div>
+								<div class="menu">公司名称：:</div>
+										<div class="kong">
+                                            {{personal_form.company}}
+											<!--<input id="text4" type="text" name="01" onblur="check()">-->
+											<span id="div4" class="tian">*(为必填)<span>
+										</div>
+                                   <div class="menu">职位:</div>
+										<div class="kong">
+                                            {{personal_form.position}}
+											<!--<input id="text4" type="text" name="01" onblur="check()">-->
+											<span id="div4" class="tian">*(为必填)<span>
+										</div>
+
+
+
+                                    <p>   </p>
+								    <p>   </p>
+									<input class="buit" type="submit" name="002" value="确  认">
+									<p style="width: 150px;display: inline-block;"></p>
+									<input class="buit" type="button" name="004" onclick="javascript:window.location.href='/home'" value="取  消">
+							</div>
+						</form>
+					</div>
+			   </div>
+		</div>
+</body>
+</html>
