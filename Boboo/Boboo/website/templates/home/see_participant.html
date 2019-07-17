@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>home</title>
+	<!--
+<link rel="shortcut icon" href="/static/images/favicon.ico" mce_href="/static/images/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="/static/css/style.css" type="text/css" />
+<link rel="stylesheet" href="/static/css/mine.css" type="text/css" />
+	--!>
+<link rel="shortcut icon" href="images/favicon.ico" mce_href="/static/images/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/mine.css" type="text/css" />
+</head>
+
+<body>
+		<div class="background">
+               <div class="top">
+				   <a href="/logout" onclick="return out()">退出登录</a>
+			   </div>
+
+           <div class="body">
+				   <form method="post" action="mcreate">
+					   <input type="button" class="buit" value="返回" onclick="location = '/home/mcreate'">
+				   </form>
+				<ul>
+                    {% for participant in participants %}
+					<li  style="padding: 15px 15px;list-style: none;
+					border-bottom: 1px solid #E5D0BA;background: #F1EAD6;">
+                        用户名：{{ participant.username }} 姓名：{{ participant.userprofile.realname }}
+                        手机号码：{{ participant.userprofile.phone }} 邮箱地址：{{ participant.email }}<input type="button" value="删除"></li>
+                    {% empty %}
+                    <p>无</p>
+                    {% endfor %}
+				</ul>
+       </div>
+</div>
+</body>
+</html>

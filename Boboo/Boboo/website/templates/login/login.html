@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>注册</title>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="/static/images/favicon.ico" mce_href="/static/images/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="/static/css/mine.css" type="text/css"/>
+    <style>
+        body{
+        background-color:#E6E6FA;
+        }
+        .pg_header{
+            position: fixed;
+            height: 60px;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #999999;
+            line-height: 60px;
+            opacity:0.7;
+        }
+        .pg_header img{
+            margin: 3px 20px;
+            float: left;
+            width: 110px;
+            height:90px;
+            text-align: center;
+            line-height: 80px;
+            font-size: 28px;
+            color: white;
+        }
+        a{
+            left: 400px;
+            display: inline-block;
+            padding: 0 40px;
+            color: white;
+            font-size:20px;
+            height:60px;
+        }
+        .selected{
+            background-color: #2459fb;
+
+        }
+        .pg_header a:hover{
+            background-color:#cccccc;
+            cursor: pointer;
+        }
+        .left{
+            margin-top: 0px;
+            width: 60%;
+            background: url(/static/images/back.jpg) no-repeat width:800px height:1000px;
+            display: inline-block;
+            float: left;
+        }
+        .left img{
+            width:90%;
+            height:740px;
+        }
+        .pg_body{
+
+            margin-top: 80px;
+            font-size: 18px;
+            display: inline-block;
+            width: 200px;
+            top:0px;
+        }
+        .pg_body .menu{
+            width: 40%;
+            padding: 15px;
+            float: left;
+            font-weight: bold;
+        }
+        input[type="text"]{
+            width: 200px;
+            height: 25px;
+            border-radius: 6px;
+        }
+        input[type="password"]{
+            width: 200px;
+            height: 25px;
+            border-radius: 6px;
+        }
+        input[type="button"]{
+            background-color: #555555;
+               border: none;
+            color: white;
+            padding: 12px 29px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 17px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]{
+            background-color: #555555;
+               border: none;
+            color: white;
+            padding: 12px 29px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 17px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .kong{
+            margin-top: -54px;
+            margin-left: 200px;
+            float:left;
+            padding: 15px;
+        }
+        .img{
+            width: 50px;
+            height: 40px;
+        }
+        .can{
+            width: 1220px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 auto;
+            display: inline-block;
+        }
+        .tian{
+            color: red;
+            float: right;
+            font-size: 12px;
+            margin-right: -120px;
+            margin-top: -25px;
+        }
+    </style>
+</head>
+<body id="i88" style="margin: 0;">
+    <div class = "pg_header">
+        <img src="/static/images/logo.png">
+        <a id="i77" href="/login/register" style="text-decoration: none">注册</a>
+        <a class="selected">登录</a>
+    </div>
+    <form name="tijiao" method="post" enctype="multipart/form-data" onsubmit="return checkEmail()" >{% csrf_token %}
+        <div class="left">
+            <img src="/static/images/bg.png">
+        </div>
+
+        <div class="pg_body">
+                <div class="menu">用户名:</div>
+                    <div class="kong">
+                        {{ form.username }}
+{#                        <input id="text1" type="text" name="01" placeholder="请输入用户名" onblur="check()">#}
+                    </div>
+                 <div class="menu">密码:</div>
+                    <div class="kong">
+                        {{ form.password }}
+{#                        <input id="text2" type="password" name="02" onblur="check()">#}
+                    </div>
+                <div class="menu">验证码</div>
+                    <div class="kong">
+                        验证码：{{ form.captcha.error }} {{ form.captcha }}
+{#                        <input id="text3" type="password" name="01" onblur="check()">#}
+                    </div>
+             </div>
+        <div class="menu">
+            <p>    </p>
+                <input type="submit" class="button2" name="logoin" value="登录"{% comment %} onClick="logo_in()"{% endcomment %}>&nbsp;&nbsp;&nbsp;
+                <p style="width: 200px;display: inline-block;"></p>
+                <input  type="button" name="004" onclick="location='../'" value="取  消">
+        </div>
+    </form>
+
+
+
+  <script type="text/javascript">
+
+  </script>
+
+</body>
+</html>

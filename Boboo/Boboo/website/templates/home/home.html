@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="shortcut icon" href="/static/images/favicon.ico" mce_href="/static/images/favicon.ico"
+          type="image/x-icon"/>
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="/static/css/mine.css" type="text/css"/>
+    <script type="text/javascript">
+	function out(){
+	if(!confirm("确认要退出登录？")){
+	window.event.returnValue = false;
+	}
+	}
+
+    </script>
+
+</head>
+
+<body>
+<div class="background">
+    <div class="top">
+        <img src="/static/images/Logo.png">
+        <a href="/logout" onclick="return out()">退出登录</a>
+    </div>
+
+    <div class="sidebar">
+        <ul>
+            <li class="selected"><a href="/home">个人中心</a></li>
+            <li><a href="/home/mlist">会议列表</a></li>
+            <li><a href="/home/invitation">会议推送</a></li>
+            <li><a href="/home/publish">会议发布</a></li>
+            <li><a href="/home/manage">会议管理</a></li>
+        </ul>
+
+        <div class="sidebar_footer">
+            <ul>
+                <li><a href="contact.html">联系我们</a></li>
+                <li><a href="set.html">设置</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="body">
+        <div class="body_left">
+            <table>
+                <tr>
+                     <td class="pho">
+                            {% if photo.image %}
+                            <img style="height:100px;width:100px;border-radius:50px;position:relative;right:20px;" src="/media/{{ photo.image }}">
+                            {% else %}
+                            <img style="height:100px;width:100px;border-radius:50px;position:relative;right:20px;"src="/media/images/default.jpg">
+                            {% endif %}
+                     </td>   <!--从数据库传个人资料头像-->
+                </tr>
+                <tr>
+                    <td>
+                        <a href="/home/info_revise" class="buit" style="font-size:20px;text-decoration=none;">编辑</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="body_right">
+            <table>
+                <tr>
+                    <td width="20%">用户名:</td>
+                    <td width="80%">{{user.username}}</td> <!--从数据库传个人资料用户名-->
+                </tr>
+                <tr>
+                    <td width="20%">真实姓名:</td>
+                    <td width="80%">{{userprofile.realname}}</td> <!--从数据库传个人资料用户名-->
+                </tr>
+                <tr>
+                    <td>手机号码:</td>
+                    <td>{{userprofile.phone}}</td> <!--从数据库传个人资料手机号-->
+                </tr>
+                <tr>
+                    <td>邮箱:</td>
+                    <td>{{userprofile.email}}</td> <!--从数据库传个人资料邮箱-->
+                </tr>
+                <tr>
+                    <td>公司名:</td>
+                    <td>{{userprofile.company}}</td> <!--从数据库传个人资料公司名-->
+                </tr>
+                <tr>
+                    <td>职位:</td>
+                    <td>{{userprofile.position}}</td> <!--从数据库传个人资料职位-->
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
